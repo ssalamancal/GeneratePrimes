@@ -89,24 +89,24 @@ namespace GeneratePrimesRefactoring
 
         private static void PutUncrossedIntegersIntoResult()
         {
-            int i;
-            int j;
+            result = new int [NumberOfUncrossedIntegers()];
 
-            // how many primes are there?
-            int count = 0;
-            for (i = 0; i < isCrossed.Length; i++)
+           for (int j = 0, i = 2; i < isCrossed.Length; i++)
             {
-                if (isCrossed[i])
-                    count++; // bump count.
-            }
-
-            result = new int[count];
-            // move the primes into the result
-            for (i = 0, j = 0; i < isCrossed.Length; i++)
-            {
-                if (isCrossed[i]) // if prime
+                if (NotCrossed(i))
                     result[j++] = i;
             }
+        }
+
+        private static int NumberOfUncrossedIntegers()
+        {
+            int count = 0;
+            for (int i = 2; i < isCrossed.Length; i++)
+            {
+                if (NotCrossed(i))
+                    count++; // bump count.
+            }
+            return count;
         }
     }
 }
