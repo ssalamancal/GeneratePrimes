@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{251AF591-B883-4B56-A680-D22B7018FB87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratePrimes", "GeneratePrimes\GeneratePrimes.csproj", "{CF475051-3FC3-436B-BBCC-1AD6BC6B8CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratePrimesTest", "GeneratePrimesTest\GeneratePrimesTest.csproj", "{21BC81AA-05AA-47C5-974D-A28935B816B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF475051-3FC3-436B-BBCC-1AD6BC6B8CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF475051-3FC3-436B-BBCC-1AD6BC6B8CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF475051-3FC3-436B-BBCC-1AD6BC6B8CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF475051-3FC3-436B-BBCC-1AD6BC6B8CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BC81AA-05AA-47C5-974D-A28935B816B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BC81AA-05AA-47C5-974D-A28935B816B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BC81AA-05AA-47C5-974D-A28935B816B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BC81AA-05AA-47C5-974D-A28935B816B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF475051-3FC3-436B-BBCC-1AD6BC6B8CA5} = {251AF591-B883-4B56-A680-D22B7018FB87}
+		{21BC81AA-05AA-47C5-974D-A28935B816B7} = {251AF591-B883-4B56-A680-D22B7018FB87}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8D6F353-71AB-402E-953D-DE6CD3EAE4D9}
+	EndGlobalSection
+EndGlobal
