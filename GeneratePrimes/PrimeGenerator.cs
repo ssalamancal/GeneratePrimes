@@ -29,7 +29,7 @@ namespace GeneratePrimesRefactoring
     {
         private static int s;
         private static bool[] f;
-        private static int[] primes;
+        private static int[] result;
 
         ///<summary>
         /// Generates an array of prime numbers.
@@ -40,14 +40,14 @@ namespace GeneratePrimesRefactoring
         {
             if (maxValue < 2) return new int[0];
 
-            InitializeSieve(maxValue);
-            Sieve();
-            LoadPrimes();
+            InitializeArrayOfIntegers(maxValue);
+            CrossOutMultiples();
+            PutUncrossedIntegersIntoResult();
 
-            return primes;
+            return result;
         }
 
-        private static void InitializeSieve(int maxValue)
+        private static void InitializeArrayOfIntegers(int maxValue)
         {
             // declarations
             s = maxValue + 1; // size of array
@@ -62,7 +62,7 @@ namespace GeneratePrimesRefactoring
             f[0] = f[1] = false;
         }
 
-        private static void Sieve()
+        private static void CrossOutMultiples()
         {
             int i;
             int j;
@@ -76,7 +76,7 @@ namespace GeneratePrimesRefactoring
             }
         }
 
-        private static int[] LoadPrimes()
+        private static int[] PutUncrossedIntegersIntoResult()
         {
             int i;
             int j;
@@ -89,15 +89,15 @@ namespace GeneratePrimesRefactoring
                     count++; // bump count.
             }
 
-            primes = new int[count];
+            result = new int[count];
             // move the primes into the result
             for (i = 0, j = 0; i < s; i++)
             {
                 if (f[i]) // if prime
-                    primes[j++] = i;
+                    result[j++] = i;
             }
 
-            return primes; // return the primes
+            return result; // return the primes
         }
     }
 }
