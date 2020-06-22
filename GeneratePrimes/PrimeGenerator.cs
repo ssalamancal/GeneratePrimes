@@ -75,12 +75,7 @@ namespace GeneratePrimesRefactoring
             double maxPrimeFactor = Math.Sqrt(isCrossed.Length) + 1;
             return (int)maxPrimeFactor;
         }
-
-        private static bool NotCrossed(int i)
-        {
-            return isCrossed[i] == false;
-        }
-
+        
         private static void CrossOutputMultipleOf(int i)
         {
             for (var multiple = 2 * i; multiple < isCrossed.Length; multiple += i)
@@ -107,6 +102,10 @@ namespace GeneratePrimesRefactoring
                     count++; // bump count.
             }
             return count;
+        }
+        private static bool NotCrossed(int i)
+        {
+            return isCrossed[i] == false;
         }
     }
 }
